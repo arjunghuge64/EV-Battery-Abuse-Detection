@@ -8,18 +8,18 @@ import pickle
 # ===============================
 
 # Battery Health Index & Charging Abuse
-bhi_model = joblib.load("models/bhi/bhi_model.pkl")
-abuse_model = joblib.load("models/bhi/abuse_model.pkl")
+bhi_model = joblib.load("bhi_model.pkl")
+abuse_model = joblib.load("abuse_model.pkl")
 
 # Driving & Electrical Abuse
-stress_score_pipeline = joblib.load("models/driving/stress_score_pipeline.pkl")
-stress_class_pipeline = joblib.load("models/driving/stress_classification_pipeline.pkl")
-label_encoder = joblib.load("models/driving/label_encoder.pkl")
+stress_score_pipeline = joblib.load("stress_score_pipeline.pkl")
+stress_class_pipeline = joblib.load("stress_classification_pipeline.pkl")
+label_encoder = joblib.load("label_encoder.pkl")
 
 # Charging Abuse Action Detection
-charge_model = joblib.load("models/charging/charging_abuse_model123.pkl")
-scaler = joblib.load("models/charging/scaler123.pkl")
-features = pickle.load(open("models/charging/features.pkl", "rb"))
+charge_model = joblib.load("charging_abuse_model123.pkl")
+scaler = joblib.load("scaler123.pkl")
+features = pickle.load(open("features.pkl", "rb"))
 
 # ===============================
 # Recommendation Engines
