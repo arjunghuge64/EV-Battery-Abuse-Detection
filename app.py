@@ -80,8 +80,7 @@ if menu == "Battery Health Index":
     if st.button("Predict Battery Health"):
         X = np.array([[temp, cycles, fast, discharge, age, resistance, driving_map[driving]]])
         bhi = bhi_model.predict(X)[0]
-        abuse = abuse_model.predict(X[:,2:7])[0]
-        bhi_adj = bhi * (1 - 0.25 * abuse)
+        bhi_adj = bhi 
 
         st.metric("Battery Health Index", f"{bhi_adj:.2f}")
         st.progress(min(int(bhi_adj),100))
